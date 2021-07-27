@@ -35,7 +35,7 @@ export default new Vuex.Store({
             commit('setSort', sortBy)
         },
         setFilters: ({commit}, filters) => {
-            commit('setSort', filters)
+            commit('setFilters', filters)
         },
     },
     mutations: {

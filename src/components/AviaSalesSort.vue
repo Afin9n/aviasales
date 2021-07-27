@@ -33,12 +33,13 @@
                 'sortBy',
             ]),
             isPriceSort () {
-                return this.sortBy === 'ask-price'
+                return this.sortingType === 'ask-price'
             }
         },
 
         methods: {
             sortsTicket (sortBy) {
+                this.sortingType = sortBy
                 this.$store.dispatch('setSort', sortBy)
             }
         },
