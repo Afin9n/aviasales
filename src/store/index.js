@@ -43,7 +43,6 @@ export default new Vuex.Store({
             state.sortBy = sortBy
         },
         setFilters (state, filters) {
-            console.log(1);
             state.filters = filters
         },
     },
