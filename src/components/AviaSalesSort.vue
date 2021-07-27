@@ -55,7 +55,7 @@
         width: 100%;
 
         &__btn {
-            height: 50px;
+            height: 5rem;
             width: 50%;
             text-transform: uppercase;
             font-size: 1.2rem;

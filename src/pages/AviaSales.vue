@@ -121,7 +121,7 @@
         }
         &__empty {
             padding: 2rem;
-            font-size: 16px;
+            font-size: 1.6rem;
             background: #FFFFFF;
             box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 10%);
             border-radius: 0.5rem;
