@@ -30,10 +30,6 @@
 
         data() {
             return {
-                sorts: {
-                    sortPrice: true,
-                    sortTime: false
-                },
                 stop: false,
                 searchId: null,
                 ticketsList: [],
