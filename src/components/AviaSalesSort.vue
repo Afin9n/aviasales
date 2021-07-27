@@ -23,6 +23,11 @@
     export default {
         name: "avia-sales-sort",
 
+        data () {
+          return {
+            sortingType: 'ask-price'
+          }
+        },
         computed: {
             ...mapGetters([
                 'sortBy',
@@ -36,7 +41,11 @@
             sortsTicket (sortBy) {
                 this.$store.dispatch('setSort', sortBy)
             }
-        }
+        },
+
+      mounted() {
+          this.sortingType = this.sortBy
+      }
     }
 </script>
 

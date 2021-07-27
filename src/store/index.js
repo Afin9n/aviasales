@@ -31,8 +31,8 @@ export default new Vuex.Store({
         ]
     },
     actions: {
-        setSort: ({commit}, sotrBy) => {
-            commit('setSort', sotrBy)
+        setSort: ({commit}, sortBy) => {
+            commit('setSort', sortBy)
         },
         setFilters: ({commit}, filters) => {
             commit('setSort', filters)

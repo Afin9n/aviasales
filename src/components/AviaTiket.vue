@@ -2,7 +2,11 @@
     <div class="avia-ticket">
         <div class="avia-ticket__details">
             <h3 class="avia-ticket__price">{{ formatPrice(ticket.price) }} Р</h3>
-            <img class="avia-ticket__logo" :src="`https://pics.avs.io/99/36/${ticket.carrier}.png`" alt="avia-brand">
+            <img
+                class="avia-ticket__logo"
+                :src="`https://pics.avs.io/99/36/${ticket.carrier}.png`"
+                :srcset="`https://pics.avs.io/99/36/${ticket.carrier}@2x.png`"
+                alt="avia-brand">
         </div>
         <div
             class="avia-ticket__way"
@@ -79,6 +83,10 @@
         box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.1);
         border-radius: .5rem;
         margin-bottom: 2rem;
+
+        &__logo {
+          width: 10rem;
+        }
 
         &__details {
             display: flex;

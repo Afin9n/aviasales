@@ -20,7 +20,7 @@
             </div>
             <div
                     class="avia-sales-filter__item"
-                    v-for="(filter, index) in filters"
+                    v-for="(filter, index) in filtersCheckbox"
                     :key="index"
                     @click="filterTickets(filter)"
             >
@@ -47,24 +47,36 @@
     export default {
         name: "avia-sales-filter",
 
+        data () {
+          return {
+            filtersCheckbox: []
+          }
+        },
+
         computed: {
             ...mapGetters([
                 'filters',
             ]),
             allFiltersActive () {
-                return this.filters.every(filter => filter.value)
+                return this.filtersCheckbox.every(filter => filter.value)
             }
         },
 
         methods: {
             filterTickets(filter) {
                 filter.value = !filter.value
+                this.$store.dispatch('setFilters', this.filtersCheckbox)
             },
             changeAllFilters (value) {
-                this.filters.map(filter => {
+                this.filtersCheckbox.map(filter => {
                     filter.value = value
                 })
-            }
+              this.$store.dispatch('setFilters', this.filtersCheckbox)
+            },
+        },
+
+        mounted() {
+          this.filtersCheckbox = this.filters
         }
     }
 </script>

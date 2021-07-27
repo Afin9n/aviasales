@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "scss/app.css";
+  @import "scss/app.scss";
 
   .app__container {
     padding-left: 2rem;
